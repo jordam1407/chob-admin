@@ -6,7 +6,8 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "@trybe/eslint-config-frontend"
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
     ],
     "overrides": [
     ],
@@ -14,9 +15,22 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
+    "plugins": ["react", "react-hooks", "eslint-plugin-import-helpers"],
     "rules": {
+        "camelcase": "error",
+        "no-debugger": "warn",
+        "no-console": "warn",
+        "no-use-before-define": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error"
     }
 }
