@@ -12,3 +12,24 @@ export function getLast7Days() {
 
     return dates
 }
+
+export function getTimeDifference(dateString) {
+    const targetDate = new Date(dateString)
+    const currentTime = new Date()
+
+    const differenceInMilliseconds = currentTime - targetDate
+    const differenceInMinutes = Math.floor(differenceInMilliseconds / (1000 * 60))
+
+    if (differenceInMinutes >= 60) {
+        const differenceInHours = Math.floor(differenceInMinutes / 60)
+        const remainingMinutes = differenceInMinutes % 60
+
+        if (remainingMinutes === 0) {
+            return `${differenceInHours}h`
+        } else {
+            return `${differenceInHours}h ${remainingMinutes}min`
+        }
+    } else {
+        return `${differenceInMinutes}min`
+    }
+}

@@ -10,9 +10,11 @@ import React from 'react'
 // import SignIn from 'views/auth/SignIn'
 
 // Icon Imports
-import { MdHome, MdOutlineShoppingCart, MdBarChart, MdPerson } from 'react-icons/md'
+import { MdHome, MdBarChart, MdPerson } from 'react-icons/md'
+import { FaArrowsDownToPeople } from 'react-icons/fa6'
 import Teste from './componentes/Teste'
 import Dashboard from './views/default/Dashboard'
+import Tables from './views/tables'
 
 const routes = [
     {
@@ -26,8 +28,8 @@ const routes = [
         name: 'Leads',
         layout: '/admin',
         path: 'nft-marketplace',
-        icon: <MdOutlineShoppingCart className="h-6 w-6" />,
-        component: <Teste text={'NFT Marketplace'} />,
+        icon: <FaArrowsDownToPeople className="h-6 w-6" />,
+        component: <Tables />,
         secondary: true,
     },
     {

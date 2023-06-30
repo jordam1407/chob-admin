@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "phone": "123-456-7890",
+    "source": "Redes Sociais",
+    "dateTime": "2023-06-30 00:15:00",
+    "status": "Novo",
+    "interest": "Consulta de Produto",
+    "conversionGoal": "Compra"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "janesmith@example.com",
+    "phone": "987-654-3210",
+    "source": "Evento",
+    "dateTime": "2023-06-30 01:30:00",
+    "status": "Qualificado",
+    "interest": "Solicitação de Demonstração",
+    "conversionGoal": "Inscrição"
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "email": "michaeljohnson@example.com",
+    "phone": "555-123-4567",
+    "source": "Anúncios",
+    "dateTime": "2023-06-30 03:45:00",
+    "status": "Contatado",
+    "interest": "Suporte ao Cliente",
+    "conversionGoal": "Registro"
+  },
+  {
+    "id": 4,
+    "name": "Emily Wilson",
+    "email": "emilywilson@example.com",
+    "phone": "999-888-7777",
+    "source": "Chatbot",
+    "dateTime": "2023-06-30 05:00:00",
+    "status": "Convertido",
+    "interest": "Informações de Serviço",
+    "conversionGoal": "Agendamento"
+  },
+  {
+    "id": 5,
+    "name": "Daniel Lee",
+    "email": "daniellee@example.com",
+    "phone": "444-555-6666",
+    "source": "Indicação",
+    "dateTime": "2023-06-30 06:30:00",
+    "status": "Não Interessado",
+    "interest": "Solicitação de Demonstração",
+    "conversionGoal": "Download"
+  },
+  {
+    "id": 6,
+    "name": "Olivia Martinez",
+    "email": "oliviamartinez@example.com",
+    "phone": "777-999-1111",
+    "source": "Outro",
+    "dateTime": "2023-06-30 07:45:00",
+    "status": "Novo",
+    "interest": "Consulta de Produto",
+    "conversionGoal": "Orçamento"
+  },
+  {
+    "id": 7,
+    "name": "William Thompson",
+    "email": "williamthompson@example.com",
+    "phone": "222-333-4444",
+    "source": "Redes Sociais",
+    "dateTime": "2023-06-30 09:00:00",
+    "status": "Contatado",
+    "interest": "Informações de Serviço",
+    "conversionGoal": "Assinatura  "
+  },
+  {
+    "id": 8,
+    "name": "Sophia Davis",
+    "email": "sophiadavis@example.com",
+    "phone": "666-777-8888",
+    "source": "Indicação",
+    "dateTime": "2023-06-30 09:05:00",
+    "status": "Follow-up",
+    "interest": "Solicitação de Demonstração",
+    "conversionGoal": "Teste Gratuito "
+  },
+  {
+    "id": 9,
+    "name": "James Moore",
+    "email": "jamesmoore@example.com",
+    "phone": "111-222-3333",
+    "source": "Outro",
+    "dateTime": "2023-06-30 08:30:00",
+    "status": "Contatado",
+    "interest": "Consulta de Produto",
+    "conversionGoal": "Compra"
+  },
+  {
+    "id": 10,
+    "name": "Ava Clark",
+    "email": "avaclark@example.com",
+    "phone": "888-999-0000",
+    "source": "Anúncios",
+    "dateTime": "2023-06-30 08:45:00",
+    "status": "Perdido",
+    "interest": "Suporte ao Cliente",
+    "conversionGoal": "Inscrição"
+  }
+]
