@@ -7,7 +7,7 @@ export function SidebarLinks(props) {
     // Chakra color mode
     let location = useLocation()
 
-    const { routes } = props
+    const { routes, onClick } = props
 
     // verifies if routeName is the one active (in browser input)
     const activeRoute = (routeName) => {
@@ -18,7 +18,10 @@ export function SidebarLinks(props) {
         return routes.map((route, index) => {
             if (route.layout === '/admin' || route.layout === '/auth') {
                 return (
-                    <Link key={index} to={route.layout + '/' + route.path}>
+                    <Link
+                        onClick={window.innerWidth < 1280 && onClick}
+                        key={index}
+                        to={route.layout + '/' + route.path}>
                         <div className="relative mb-3 flex hover:cursor-pointer">
                             <li className="my-[3px] flex cursor-pointer items-center px-8" key={index}>
                                 <span

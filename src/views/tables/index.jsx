@@ -1,5 +1,5 @@
 import tableDataComplex from './variables/tableDataComplex.json'
-import ComplexTable from './components/ComplexTable'
+import ComplexTable from './components/testTable'
 
 const Tables = () => {
     return (

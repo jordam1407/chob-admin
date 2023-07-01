@@ -102,11 +102,28 @@ const ComplexTable = (props) => {
                             </div>
                         }
                     />
+                    <CardMenu
+                        items={[
+                            { icon: <BiFilter />, text: 'Novo' },
+                            { icon: <BiFilter />, text: 'Contatado' },
+                            { icon: <BiFilter />, text: 'Qualificado' },
+                            { icon: <BiFilter />, text: 'Convertido' },
+                            { icon: <BiFilter />, text: 'Não Interessado' },
+                            { icon: <BiFilter />, text: 'Perdido' },
+                            { icon: <BiFilter />, text: 'FollowUp' },
+                        ]}
+                        icon={
+                            <div className="text-sm font-normal flex">
+                                <span className="mx-auto px-1">Status</span>
+                                <MdKeyboardArrowDown className="my-auto" />
+                            </div>
+                        }
+                    />
                 </div>
             </div>
 
             <div className="mt-8 h-full overflow-x-scroll xl:overflow-hidden">
-                <table className="w-full">
+                <table className="sm:w-full w-[1200px]">
                     <thead>
                         <tr className="border-b dark:border-gray-700 dark:text-gray-400 text-gray-800 uppercase text-xs">
                             <th className="pr-2 py-4 font-medium tracking-wide text-left dark:!bg-gray-900 cursor-pointer">
@@ -198,10 +215,3 @@ const ComplexTable = (props) => {
 }
 
 export default ComplexTable
-
-{
-    /* <th key={key} className="pr-4 font-medium tracking-wide text-left dark:!bg-gray-900">
-    <td key={index} className="pt-[14px] pb-[18px] sm:text-[14px]">
-                                        <p className="text-sm font-bold text-gray-700 dark:text-white">{value}</p>
-                                    </td> */
-}

@@ -8,11 +8,11 @@ import Navbar from '../../componentes/Admin/navbar'
 export default function Admin(props) {
     const { ...rest } = props
     const location = useLocation()
-    const [open, setOpen] = React.useState(window.innerWidth < 1200 ? false : true)
+    const [open, setOpen] = React.useState(window.innerWidth < 1280 ? false : true)
     const [currentRoute, setCurrentRoute] = React.useState('Main Dashboard')
 
     React.useEffect(() => {
-        window.addEventListener('resize', () => (window.innerWidth < 1200 ? setOpen(false) : setOpen(true)))
+        window.addEventListener('resize', () => (window.innerWidth < 1280 ? setOpen(false) : setOpen(true)))
     }, [])
     React.useEffect(() => {
         getActiveRoute(routes)
@@ -46,14 +46,13 @@ export default function Admin(props) {
         })
     }
 
-    document.documentElement.dir = 'ltr'
     return (
         <div className="flex h-full w-full">
             <Sidebar open={open} onClose={() => setOpen(false)} />
             {/* Navbar & Main Content */}
             <div className="h-full w-full bg-lightPrimary dark:!bg-gray-950 transition-all duration-150">
                 {/* Main Content */}
-                <main className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}>
+                <main className={`h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}>
                     {/* Routes */}
                     <div className="h-full">
                         <Navbar

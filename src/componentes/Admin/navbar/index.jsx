@@ -12,7 +12,7 @@ const Navbar = (props) => {
     const { onOpenSidenav, brandText } = props
 
     return (
-        <nav className="sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl p-2">
+        <nav className="sticky top-0 pt-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-t-none rounded-xl p-2 backdrop-blur-xl">
             <div className="ml-[6px]">
                 <div className="h-6 w-[224px] pt-1">
                     <a
