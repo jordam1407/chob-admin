@@ -111,6 +111,144 @@ export const barChartOptionsDailyTraffic = {
     },
 }
 
+export const barChartDataHourlyLeads = [
+    {
+        name: 'Acesso Diário',
+        data: [1, 24, 43, 24, 35, 26, 17, 28, 19, 28, 18, 14, 43, 44, 45, 46, 47, 48, 49, 40, 41, 42, 43, 44].sort(
+            () => 0.5 - Math.random()
+        ),
+    },
+]
+
+export const barChartOptionsHourlyLeads = {
+    chart: {
+        toolbar: {
+            show: false,
+        },
+    },
+    tooltip: {
+        style: {
+            fontSize: '12px',
+            fontFamily: undefined,
+            backgroundColor: '#000000',
+        },
+        onDatasetHover: {
+            style: {
+                fontSize: '12px',
+                fontFamily: undefined,
+            },
+        },
+        theme: 'dark',
+    },
+    xaxis: {
+        categories: [
+            '01',
+            '02',
+            '03',
+            '04',
+            '05',
+            '06',
+            '07',
+            '08',
+            '09',
+            '10',
+            '11',
+            '12',
+            '13',
+            '14',
+            '15',
+            '16',
+            '17',
+            '18',
+            '19',
+            '20',
+            '21',
+            '22',
+            '23',
+            '24',
+        ],
+        show: false,
+        width: '5px',
+        labels: {
+            show: true,
+            style: {
+                colors: '#A3AED0',
+                fontSize: '14px',
+                fontWeight: '500',
+            },
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
+    },
+    yaxis: {
+        show: true,
+        color: 'black',
+        labels: {
+            show: true,
+            style: {
+                fontSize: '14px',
+            },
+        },
+    },
+    grid: {
+        show: false,
+        strokeDashArray: 5,
+        yaxis: {
+            lines: {
+                show: true,
+            },
+        },
+        xaxis: {
+            lines: {
+                show: false,
+            },
+        },
+    },
+    fill: {
+        type: 'gradient',
+        gradient: {
+            type: 'vertical',
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            colorStops: [
+                [
+                    {
+                        offset: 0,
+                        color: '#ea580c',
+                        opacity: 1,
+                    },
+                    {
+                        offset: 100,
+                        color: '#fb923c',
+                        opacity: 1,
+                    },
+                ],
+            ],
+        },
+    },
+    dataLabels: {
+        enabled: true,
+        offsetY: -20,
+        style: {
+            colors: ['#ededed'],
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 5,
+            columnWidth: '50%',
+            dataLabels: {
+                position: 'top',
+            },
+        },
+    },
+}
+
 export const pieChartOptions = {
     labels: ['Your files', 'System', 'Empty'],
     colors: ['#4318FF', '#6AD2FF', '#EFF4FB'],

@@ -3,6 +3,7 @@ import Widget from '../../componentes/widget/Widget'
 import { MdChat, MdPersonAdd, MdTrendingUp, MdStar, MdAccessTime, MdOutlineAdsClick } from 'react-icons/md'
 import DailyChats from './components/DailyChats'
 import DailyTraffic from './components/DailyAcess'
+import HourlyAcess from './components/HourlyAcess'
 
 const conversationData = [
     {
@@ -53,6 +54,9 @@ function Dashboard() {
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
                 <DailyChats />
                 <DailyTraffic />
+            </div>
+            <div className="mt-5 grid grid-cols-1 gap-5">
+                <HourlyAcess />
             </div>
         </>
     )
