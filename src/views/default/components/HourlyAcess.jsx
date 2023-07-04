@@ -1,18 +1,26 @@
-import { barChartDataHourlyLeads } from '../../../variables/charts'
-import { barChartOptionsHourlyLeads } from '../../../variables/charts'
-import { MdArrowDropUp, MdOutlineCalendarToday } from 'react-icons/md'
+import { lineChartDataHourlyLeads } from '../../../variables/charts'
+import { lineChartOptionsHourlyLeads } from '../../../variables/charts'
+import { MdArrowDropUp } from 'react-icons/md'
 import Card from '../../../componentes/card'
-import BarChart from '../../../componentes/charts/BarChart'
+import { useState } from 'react'
+import { getCurrentDate } from '../../../utils/date.utils'
+import LineChart from '../../../componentes/charts/LineChart'
 const HourlyAcess = () => {
+    const [date, setDate] = useState(getCurrentDate())
+    console.log(date)
     return (
         <Card extra="pb-7 p-[20px]">
             <div className="flex flex-row justify-between">
                 <div className="ml-1 pt-2">
                     <p className="text-sm font-medium leading-4 text-gray-600">Leads por Hora</p>
-                    <button className="linear mt-1 flex items-center justify-center gap-2 rounded-lg bg-lightPrimary p-2 text-gray-600 transition duration-200 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-200 dark:bg-gray-700 dark:hover:opacity-90 dark:active:opacity-80 dark:text-gray-100">
-                        <MdOutlineCalendarToday />
-                        <span className="text-sm font-medium text-gray-600 dark:text-gray-100">Hoje</span>
-                    </button>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        value={date}
+                        onChange={({ target }) => setDate(target.value)}
+                        className="text-sm mt-2 px-4 py-2 w-fit border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                    />
                 </div>
                 <div className="mt-2 flex items-start">
                     <div className="flex items-center text-sm text-green-500">
@@ -23,7 +31,7 @@ const HourlyAcess = () => {
             </div>
 
             <div className="h-[300px] w-full pt-10 pb-0">
-                <BarChart chartData={barChartDataHourlyLeads} chartOptions={barChartOptionsHourlyLeads} />
+                <LineChart options={lineChartOptionsHourlyLeads} series={lineChartDataHourlyLeads} />
             </div>
         </Card>
     )
