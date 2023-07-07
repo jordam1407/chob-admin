@@ -12,7 +12,7 @@ const Widget = ({ icon, title, subtitle, percentage }) => {
             </div>
 
             <div className="h-50 ml-4 flex w-auto flex-col justify-center">
-                <p className="text-sm font-medium text-gray-600">{title}</p>
+                <p className="text-sm font-medium text-gray-600 dark:text-gray-300">{title}</p>
                 <div className="flex my-auto flex-row items-center">
                     <h4 className="text-xl font-bold text-gray-700 dark:text-gray-100">{subtitle}</h4>
                     {percentage && (

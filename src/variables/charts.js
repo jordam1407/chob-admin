@@ -1,5 +1,6 @@
 import { getLast7Days } from '../utils/date.utils'
 
+const theme = localStorage.getItem('theme') || 'dark'
 export const barChartDataDailyTraffic = [
     {
         name: 'Acesso Diário',
@@ -9,9 +10,13 @@ export const barChartDataDailyTraffic = [
 
 export const barChartOptionsDailyTraffic = {
     chart: {
+        background: 'transparent',
         toolbar: {
             show: false,
         },
+    },
+    theme: {
+        mode: theme,
     },
     tooltip: {
         style: {
@@ -48,11 +53,9 @@ export const barChartOptionsDailyTraffic = {
     },
     yaxis: {
         show: true,
-        color: 'black',
         labels: {
-            show: true,
             style: {
-                fontSize: '14px',
+                color: 'red',
             },
         },
     },
@@ -115,6 +118,7 @@ export const pieChartOptions = {
     labels: ['Your files', 'System', 'Empty'],
     colors: ['#4318FF', '#6AD2FF', '#EFF4FB'],
     chart: {
+        background: 'transparent',
         width: '50px',
     },
     states: {
@@ -177,6 +181,7 @@ export const barChartDataWeeklyRevenue = [
 
 export const barChartOptionsWeeklyRevenue = {
     chart: {
+        background: 'transparent',
         stacked: true,
         toolbar: {
             show: false,
@@ -284,9 +289,10 @@ export const lineChartOptionsTotalSpent = {
     },
 
     theme: {
-        mode: 'light',
+        mode: theme,
     },
     chart: {
+        background: 'transparent',
         type: 'line',
 
         toolbar: {
@@ -361,9 +367,10 @@ export const lineChartOptionsHourlyLeads = {
     },
 
     theme: {
-        mode: 'light',
+        mode: theme,
     },
     chart: {
+        background: 'transparent',
         type: 'line',
 
         toolbar: {
@@ -441,5 +448,253 @@ export const lineChartOptionsHourlyLeads = {
 
     yaxis: {
         show: true,
+    },
+}
+
+export const lineChartDataFlow = [
+    {
+        name: 'Leads',
+        data: [1500, 1200, 1000, 950, 800, 650, 629, 322, 84, 83, 83],
+        color: '#ea580c',
+    },
+]
+
+export const lineChartOptionsFlow = {
+    legend: {
+        show: false,
+    },
+    theme: {
+        mode: theme,
+    },
+    chart: {
+        background: 'transparent',
+        type: 'area',
+        toolbar: {
+            show: false,
+        },
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    stroke: {
+        curve: 'smooth',
+    },
+    tooltip: {
+        style: {
+            fontSize: '12px',
+            fontFamily: undefined,
+            backgroundColor: '#000000',
+        },
+        onDatasetHover: {
+            style: {
+                fontSize: '12px',
+                fontFamily: undefined,
+            },
+        },
+        theme: 'dark',
+    },
+    grid: {
+        show: false,
+    },
+    xaxis: {
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
+        labels: {
+            style: {
+                colors: '#A3AED0',
+                fontSize: '12px',
+                fontWeight: '500',
+            },
+        },
+        type: 'text',
+        range: undefined,
+        categories: [
+            'Início',
+            'Nome',
+            'Email',
+            'Telefone',
+            'Cliente',
+            'Área',
+            'Mensagem',
+            'Acessos',
+            'Investimento',
+            'Segmento',
+            'Lead completo',
+        ],
+    },
+    yaxis: {
+        show: true,
+        min: 0,
+        max: lineChartDataFlow[0].data[0] * 1.2,
+    },
+    annotations: {
+        xaxis: [
+            {
+                x: 'Nome',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[0] - lineChartDataFlow[0].data[1]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Email',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[1] - lineChartDataFlow[0].data[2]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Telefone',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[2] - lineChartDataFlow[0].data[3]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Cliente',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[3] - lineChartDataFlow[0].data[4]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Área',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[4] - lineChartDataFlow[0].data[5]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Mensagem',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[5] - lineChartDataFlow[0].data[6]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Acessos',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[6] - lineChartDataFlow[0].data[7]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Investimento',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[7] - lineChartDataFlow[0].data[8]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+            {
+                x: 'Segmento',
+                borderColor: '#FEB019',
+                label: {
+                    text: `${lineChartDataFlow[0].data[8] - lineChartDataFlow[0].data[9]} Abandonos`,
+                    style: {
+                        background: theme === 'dark' ? '#1f2937' : '#f3f4f6',
+                        color: theme === 'dark' ? '#f3f4f6' : '#1f2937',
+                        fontSize: '12px',
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 5,
+                            bottom: 5,
+                        },
+                    },
+                },
+            },
+        ],
     },
 }

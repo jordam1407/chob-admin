@@ -14,6 +14,7 @@ import {
 import DailyChats from './components/DailyChats'
 import DailyTraffic from './components/DailyAcess'
 import HourlyAcess from './components/HourlyAcess'
+import FunnelChart from './components/flowChart'
 
 const conversationData = [
     {
@@ -111,6 +112,9 @@ function Dashboard() {
                 <div className="col-span-3">
                     <HourlyAcess />
                 </div>
+            </div>
+            <div className="mt-5 grid grid-cols-1 gap-5">
+                <FunnelChart />
             </div>
         </>
     )

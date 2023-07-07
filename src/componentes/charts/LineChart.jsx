@@ -2,9 +2,9 @@
 import Chart from 'react-apexcharts'
 
 const LineChart = (props) => {
-    const { series, options } = props
+    const { series, options, type } = props
 
-    return <Chart options={options} type="line" width="100%" height="100%" series={series} />
+    return <Chart options={options} type={type} width="100%" height="100%" series={series} />
 }
 
 export default LineChart

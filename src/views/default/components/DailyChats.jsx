@@ -12,7 +12,9 @@ const DailyChats = () => {
                     <MdOutlineCalendarToday />
                     <span className="text-sm font-medium text-gray-600 dark:text-gray-100">Esta Semana</span>
                 </button>
-                <p className="text-sm font-medium text-gray-600 align-middle my-auto">Interações x Leads gerados</p>
+                <p className="font-medium text-gray-600 dark:text-gray-300 align-middle my-auto">
+                    Interações x Leads gerados
+                </p>
                 <button className="!linear z-[1] flex items-center justify-center rounded-lg bg-lightPrimary p-2 text-brand-500 !transition !duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-white/20 dark:active:bg-white/10">
                     <MdBarChart className="h-6 w-6" />
                 </button>
@@ -36,7 +38,7 @@ const DailyChats = () => {
                     </div>
                 </div>
                 <div className="h-full w-full">
-                    <LineChart options={lineChartOptionsTotalSpent} series={lineChartDataTotalSpent} />
+                    <LineChart options={lineChartOptionsTotalSpent} series={lineChartDataTotalSpent} type="line" />
                 </div>
             </div>
         </Card>

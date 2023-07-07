@@ -7,12 +7,12 @@ import { getCurrentDate } from '../../../utils/date.utils'
 import LineChart from '../../../componentes/charts/LineChart'
 const HourlyAcess = () => {
     const [date, setDate] = useState(getCurrentDate())
-    console.log(date)
+
     return (
         <Card extra="pb-7 p-[20px]">
             <div className="flex flex-row justify-between">
                 <div className="ml-1 pt-2">
-                    <p className="text-sm font-medium leading-4 text-gray-600">Leads por Hora</p>
+                    <p className="font-medium leading-4 text-gray-600 dark:text-gray-300">Leads por Hora</p>
                     <input
                         type="date"
                         id="date"
@@ -31,7 +31,7 @@ const HourlyAcess = () => {
             </div>
 
             <div className="h-[300px] w-full pt-10 pb-0">
-                <LineChart options={lineChartOptionsHourlyLeads} series={lineChartDataHourlyLeads} />
+                <LineChart options={lineChartOptionsHourlyLeads} series={lineChartDataHourlyLeads} type="line" />
             </div>
         </Card>
     )
